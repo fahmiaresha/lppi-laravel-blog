@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortfolioController;
@@ -26,6 +27,8 @@ Route::get('/todo', [PortfolioController::class, 'todo']);
 
 Route::get('/login', [PortfolioController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [PortfolioController::class, 'login']);
+Route::get('/about', [PortfolioController::class, 'about']);
+Route::get('/contact', [PortfolioController::class, 'contact']);
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::post('/posts', [PostController::class, 'store']);
@@ -42,6 +45,6 @@ Route::post('/comments', [CommentsController::class, 'store']);
 Route::post('/comments/{id}', [CommentsController::class, 'update']);
 Route::delete('/comments/{id}', [CommentsController::class, 'destroy']);
 
-
+Route::get('/blog', [BlogController::class, 'index']);
 
 

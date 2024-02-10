@@ -11,7 +11,7 @@
         <div class="card-body">
             <h1 class="">Manage Comments</h1>
             <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCommentModal">
-                Add Comment
+            <i class="fas fa-plus-circle me-1"></i> Add Comment
             </button>
             <!-- Tambah Komentar Modal -->
             <div class="modal fade" id="addCommentModal" tabindex="-1" aria-labelledby="addCommentModalLabel" aria-hidden="true">
@@ -50,7 +50,7 @@
             <table id="commentsTable" class="table table-bordered table-striped">
                 <thead class="table-dark">
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Title</th>
                         <th>Content</th>
                         <th>Actions</th>
@@ -59,15 +59,15 @@
                 <tbody>
                     @foreach($comments as $comment)
                     <tr>
-                        <td>{{ $comment->comment_id }}</td>
+                    <td>{{ $loop->iteration }}</td>
                         <td>{{ $comment->title }}</td>
                         <td>{{ $comment->content }}</td>
                         <td>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editCommentModal{{ $comment->comment_id }}">
-                                Edit
+                            <i class="fas fa-pencil-alt me-1"></i> Edit
                             </button>
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteCommentModal{{ $comment->comment_id }}">
-                                Delete
+                            <i class="fas fa-trash-alt me-1"></i>  Delete
                             </button>
                         </td>
                     </tr>

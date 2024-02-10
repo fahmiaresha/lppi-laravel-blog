@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -39,7 +38,7 @@
                                 <a href="/">Home</a>
                             </li>
                             <li><a href="/blog">Blog</a></li>
-                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/about">About</a></li>
                             <li><a href="/contact">Contact </a></li>
                             <li><a href="/todo">Todo App</a></li>
                             <li class="dropdown">
@@ -87,7 +86,6 @@
                                     <li class="dropdown in-megamenu">
                                         <a href="/">Home</a>
                                     </li>
-
                                     <li><a href="/blog">Blog</a></li>
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/contact">Contact </a></li>

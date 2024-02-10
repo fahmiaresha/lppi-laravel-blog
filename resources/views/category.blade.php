@@ -11,7 +11,7 @@
         <div class="card-body">
             <h1 class="">Manage Categories</h1>
             <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
-                Add Category
+            <i class="fas fa-plus-circle me-1"></i>  Add Category
             </button>
             <!-- Tambah Kategori Modal -->
             <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
@@ -40,7 +40,7 @@
             <table id="categoriesTable" class="table table-bordered table-striped dataTable">
                 <thead class="table-dark">
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Category Name</th>
                         <th>Actions</th>
                     </tr>
@@ -48,14 +48,14 @@
                 <tbody>
                     @foreach($categories as $category)
                     <tr>
-                        <td>{{ $category->category_id }}</td>
+                    <td>{{ $loop->iteration }}</td>
                         <td>{{ $category->category_name }}</td>
                         <td>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editCategoryModal{{ $category->category_id }}">
-                                Edit
+                            <i class="fas fa-pencil-alt me-1"></i> Edit
                             </button>
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal{{ $category->category_id }}">
-                                Delete
+                            <i class="fas fa-trash-alt me-1"></i> Delete
                             </button>
                         </td>
                     </tr>
